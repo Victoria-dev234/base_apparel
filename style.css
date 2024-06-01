@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+/* || REST */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* || VARIABLES  */
+:root {
+  --PARAGRAPH-COLOR: hsl(0, 36%, 70%);
+  --ERRORBORDER-COLOR: #f96262;
+  --FONT-COLOR: hsl(0, 6%, 24%);
+}
+
+/* || GENERAL STYLES  */
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.hero {
+  max-width: 120px;
+  margin: 2rem;
+}
+
+picture img {
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  margin: 3rem 1.5rem 5rem 1.5rem;
+  text-align: center;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 2.2rem;
+  line-height: 2.5rem;
+}
+
+h1 {
+  color: var(--PARAGRAPH-COLOR);
+  font-weight: 300;
+}
+
+h2 {
+  color: var(--FONT-COLOR);
+  font-weight: 600;
+}
+
+p {
+  color: var(--PARAGRAPH-COLOR);
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  margin: 1.3rem 0;
+  font-weight: 400;
+}
+
+.form_input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.input img {
+  display: none;
+  position: absolute;
+  right: 2.2rem;
+}
+
+input[type="email"] {
+  padding: 0.8rem 0.7rem;
+  padding-right: 4rem;
+  border: 1px solid #413a3a4b;
+  border-radius: 2rem;
+}
+
+input[type="email"]:focus {
+  outline: none;
+  border: 1px solid hsl(0, 36%, 70%);
+}
+
+input::placeholder {
+  color: var(--PARAGRAPH-COLOR);
+  padding-left: 0.7rem;
+}
+
+button {
+  padding: 0.6rem 1.5rem;
+  border: none;
+  border-radius: 3rem;
+  background-image: linear-gradient(
+    to right,
+    hsl(0, 80%, 86%),
+    hsl(0, 74%, 74%)
+  );
+  box-shadow: 6px 6px 10px hsl(0, 62%, 90%);
+  margin-left: -1.9rem;
+  z-index: 1;
+}
+
+button:hover {
+  background-image: linear-gradient(
+    to right,
+    hsl(0, 80%, 86%),
+    hsl(0, 80%, 86%)
+  );
+}
+
+.info p:last-child {
+  font-style: italic;
+  font-size: 0.8rem;
+  margin-top: 0;
+}
+
+/* || MEDIA QUERIES */
+@media screen and (min-width: 768px) {
+  body {
+    background: url(img/bg-pattern-desktop.svg) no-repeat,
+      linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  }
+
+  main {
+    height: 100vh;
+  }
+
+  picture img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .body {
+    margin-bottom: 0;
+    margin-left: 2rem;
+    display: grid;
+    gap: 0 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+      "n i"
+      "t i";
+  }
+
+  .hero {
+    grid-area: n;
+  }
+
+  .image {
+    grid-area: i;
+  }
+
+  .info {
+    grid-area: t;
+    text-align: left;
+    margin-top: -7rem;
+    margin-bottom: 0;
+    grid-row: 2 / 3;
+  }
+
+  .form_input {
+    justify-content: left;
+  }
+
+  input[type="email"] {
+    padding-right: 3rem;
+  }
+
+  .info p:last-child {
+    margin-left: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .body {
+    margin-left: 6rem;
+  }
+
+  h1,
+  h2 {
+    letter-spacing: 0.5rem;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+  input[type="email"] {
+    padding-right: 7rem;
+  }
+
+  .info {
+    margin-top: -10rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .body {
+    margin-left: 8rem;
+  }
+
+  h1,
+  h2 {
+    letter-spacing: 1rem;
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+
+  p {
+    padding-right: 7.9rem;
+  }
+
+  input[type="email"] {
+    padding-right: 10rem;
+  }
+}

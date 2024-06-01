@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <main class="body">
+      <nav class="hero">
+        <img src="img/logo.svg" alt="hero-desktop" />
+      </nav>
+
+      <span class="image">
+        <picture>
+          <source media="(min-width:768px)" srcset="img/hero-desktop.jpg" />
+          <source media="(min-width:320px)" srcset="img/hero-mobile.jpg" />
+          <img src="img/hero-mobile.jpg" alt="image" width="375" height="250" />
+        </picture>
+      </span>
+
+      <section class="info">
+        <h1>We're</h1>
+        <h2>COMING</h2>
+        <h2>SOON</h2>
+        <p>
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+
+        <form id="form" novalidate>
+          <span class="form_input">
+            <span class="input">
+              <input
+                id="email"
+                type="email"
+                placeholder="Email Adress"
+                autocomplete="off"
+              />
+              <img
+                id="error_icon"
+                src="img/icon-error.svg"
+                alt="icon-error"
+                width="20"
+                height="20"
+              />
+            </span>
+            <button type="submit" id="form_btn">
+              <img src="img/icon-arrow.svg" alt="icon-arrow" />
+            </button>
+          </span>
+          <p id="message"></p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
